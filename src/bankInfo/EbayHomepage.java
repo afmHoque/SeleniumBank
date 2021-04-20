@@ -29,6 +29,8 @@ public class EbayHomepage {
         // == primitive data type
         // equals
 
+        // yes we did
+
         if(actualHomePageLogo.equals(expecetedLogo)){
 
             System.out.println("Test Passed");
