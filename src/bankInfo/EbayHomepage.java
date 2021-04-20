@@ -29,7 +29,7 @@ public class EbayHomepage {
         // == primitive data type
         // equals
 
-        // yes we did   hello
+        // yes we did   hello  Milad /// Last part is ....
 
         if(actualHomePageLogo.equals(expecetedLogo)){
 
