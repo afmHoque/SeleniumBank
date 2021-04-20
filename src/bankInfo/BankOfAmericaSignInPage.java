@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class BankOfAmerica {
+public class BankOfAmericaSignInPage {
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -25,10 +25,9 @@ public class BankOfAmerica {
 
         driver.findElement(By.xpath("//a[@id='forgot-oid-pwd']")).click(); // forget password
 
+
         Thread.sleep(5000);
         driver.navigate().back();
-
-
 
     }
 
