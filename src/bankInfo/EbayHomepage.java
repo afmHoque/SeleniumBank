@@ -1,5 +1,6 @@
 package bankInfo;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -9,45 +10,39 @@ public class EbayHomepage {
 
         System.setProperty("webdriver.chrome.driver", "/Users/afmhoque/IdeaProjects/SeleniumBank/driver/chromedriver");
         WebDriver driver = new ChromeDriver();
-        driver.get(" https://www.ebay.com/");
+        driver.get("https://www.ebay.com/");
 
-        String targetUrl = "https://www.ebay.com/";
-        openUrl(driver,targetUrl);
-        verifyHomePage(driver);
+        String Url = "https://ebay.com";
+        openurl(driver,Url);
+        verifyWebLogo(driver);
 
     }
 
-    public static void verifyHomePage(WebDriver driver){
+    public static void verifyWebLogo(WebDriver driver){
+        System.out.println("Test kcases Id: 001, eBay test 001");
+        System.out.println("Test kcases Id: 001, eBay test 002");
 
-        System.out.println("Test case open Url ID: eBay 001");
-        System.out.println("Test case Close Url ID: eBay 002");
+        String expectedLogo = "//*[@id='gh-logo']";
+        String actualHomePage = driver.getCurrentUrl();
 
-        String expecetedLogo = "//*[@id=\"gh-logo\"]";
-        String actualHomePageLogo = driver.getCurrentUrl();
 
-        // =  objective
-        // == primitive data type
-        // equals
-
-        // yes we did   hello  Milad /// Last part is ....
-
-        if(actualHomePageLogo.equals(expecetedLogo)){
+        if(actualHomePage.equals(expectedLogo)){
 
             System.out.println("Test Passed");
         }else {
             System.out.println("Test failed");
         }
 
+
     }
 
-    public static void openUrl(WebDriver driver, String Url) {
-        driver.get(Url);
-        System.out.println("Open browser Successfully");
+    public static void openurl(WebDriver driver, String url){
+        driver.get(url);
+        System.out.println("Open eBay browser");
     }
 
-    public static void closeUrl(WebDriver driver, String Url) {
+    public static void closeBrowser(WebDriver driver,String Url){
         driver.close();
-        System.out.println("Close browser Successfully");
-
+        System.out.println("Close Browser Successfully");
     }
 }
