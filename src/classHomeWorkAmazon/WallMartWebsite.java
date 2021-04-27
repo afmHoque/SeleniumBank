@@ -26,8 +26,6 @@ public class WallMartWebsite {
         WebElement ele2 = driver.findElement(By.cssSelector("#js-global-footer-wrapper > div > div:nth-child(2) > div"));
         System.out.println(ele2.getText());
 
-
-
         // only for Wallmart services
         WebElement ele = driver.findElement(By.cssSelector("#js-global-footer-wrapper > div > div:nth-child(2) > div > div:nth-child(4) > ul"));
         System.out.println(ele.getText());

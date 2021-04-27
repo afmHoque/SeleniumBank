@@ -15,15 +15,16 @@ public class OrangeHrmSite {
 
         driver.manage().window().maximize();
 
-        Thread.sleep(5000);
-        driver.findElement(By.cssSelector("input[name=txtUsername]")).sendKeys("Admin"); // Login panel
-        driver.findElement(By.cssSelector("input[name=txtPassword]")).sendKeys("admin123"); // Enter valid password
-        driver.findElement(By.cssSelector("input[name=Submit]")).click(); // click on LOGIN button
 
-        // Personal Details Pull name
+            Thread.sleep(5000);
+            driver.findElement(By.cssSelector("input[name=txtUsername]")).sendKeys("Admin"); // Login panel
+            driver.findElement(By.cssSelector("input[name=txtPassword]")).sendKeys("admin123"); // Enter valid password
+            driver.findElement(By.cssSelector("input[name=Submit]")).click(); // click on LOGIN button
 
-        Thread.sleep(5000);
-        driver.findElement(By.cssSelector("#menu_pim_viewMyDetails")).click(); // click on my "My Info"
+            // Personal Details Pull name
+
+            Thread.sleep(5000);
+            driver.findElement(By.cssSelector("#menu_pim_viewMyDetails")).click(); // click on my "My Info"
 
             Thread.sleep(5000);
             driver.findElement(By.cssSelector("#btnSave")).click();
@@ -45,8 +46,10 @@ public class OrangeHrmSite {
             driver.findElement(By.cssSelector("input[id=personal_txtEmployeeId]")).sendKeys("13070"); // Employee Id
 
             driver.findElement(By.cssSelector("input[id=personal_txtOtherID]")).clear();  // clear
+            Thread.sleep(2000);
 
             driver.findElement(By.cssSelector("input[id=personal_txtOtherID]")).sendKeys("0117");  // Other Id
+
 
             driver.findElement(By.cssSelector("input[id=personal_txtLicenNo]")).sendKeys("01234567"); // Driver's License Number
 
@@ -60,7 +63,7 @@ public class OrangeHrmSite {
 
             //License Expiry Date
 
-            //  driver.findElement(By.cssSelector("#ui-datepicker-div > table > tbody > tr:nth-child(4) > td.ui-datepicker-current-day > a")).click();
+            // driver.findElement(By.cssSelector("#ui-datepicker-div > table > tbody > tr:nth-child(4) > td.ui-datepicker-current-day > a")).click();
 
             driver.findElement(By.cssSelector("input[id=personal_txtNICNo]")).sendKeys("070-11-0010");  // SSN Number
             driver.findElement(By.cssSelector("input[id=personal_txtSINNo]")).sendKeys("o70-11-1234"); // SIN Number
@@ -70,7 +73,12 @@ public class OrangeHrmSite {
             driver.findElement(By.cssSelector("#personal_cmbMarital")).click();  // Marital Status
             driver.findElement(By.cssSelector("#personal_cmbNation")).click();
 
+            driver.findElement(By.cssSelector("input[id=personal_txtEmpNickName]")).sendKeys("Shipon"); // nick name
+            driver.findElement(By.cssSelector("input[type='checkbox']")).click();  // Smpker
+            driver.findElement(By.cssSelector("#personal_txtMilitarySer")).sendKeys("No");  // Military Service
 
-        }
+
+
     }
 
+}
