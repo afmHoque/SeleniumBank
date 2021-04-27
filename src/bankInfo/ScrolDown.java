@@ -23,6 +23,8 @@ public class ScrolDown {
             Thread.sleep(5000);
             driver.findElement(By.xpath("//*[@id='gf-BIG']/table/tbody/tr/td[2]/ul/li[4]/a")).click(); // Click Business sellers
 
+            Thread.sleep(5000);
+
             driver.navigate().back();
 
         // Scroll Up

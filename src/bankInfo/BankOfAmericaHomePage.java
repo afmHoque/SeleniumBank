@@ -13,6 +13,7 @@ public class BankOfAmericaHomePage {
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://bankofamerica.com/");
+        driver.manage().window().maximize();
 
         driver.findElement(By.xpath("//*[@id='navHomeLoans']/span[3]")).click();  // I click on Home loans
 
