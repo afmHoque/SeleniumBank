@@ -21,16 +21,18 @@ public class WallMartWebsite {
 
         es.executeScript("window.scrollBy(0,4500);");  // Went scroll down 4500 pixel
 
+        // For all footer text
 
+        WebElement ele2 = driver.findElement(By.cssSelector("#js-global-footer-wrapper > div > div:nth-child(2) > div"));
+        System.out.println(ele2.getText());
+
+
+
+        // only for Wallmart services
         WebElement ele = driver.findElement(By.cssSelector("#js-global-footer-wrapper > div > div:nth-child(2) > div > div:nth-child(4) > ul"));
         System.out.println(ele.getText());
 
 
-
-
-
-
-      //  driver.close();
 
 
     }
